@@ -1,6 +1,6 @@
 package controller;
+
 import java.util.ArrayList;
-import java.util.Objects;
 
 import model.Password;
 import model.User;
@@ -22,12 +22,12 @@ public class SimpleAuth {
   }
 
   private User currentUser;
-  
-  public void registerUser (String newUsername, String newPassword) {
+
+  public void registerUser(String newUsername, String newPassword) {
     // create user object
     Username username = new Username(newUsername);
     Password password = new Password(newPassword);
-    
+
     // add username to username db and run erro checking
     nameList.addUsername(newUsername);
     User user = new User(username, password);
@@ -36,24 +36,23 @@ public class SimpleAuth {
     view.registerSuccessMsg(user);
   }
 
-
   public void signIn(String username, String password) {
     // loop user database
     for (User user : userDatabase.getAllUsers()) {
-      
+
       // check if username is correct - Username.java
-      if(!user.getUsername().contains(username)) {
-        throw new Error("user Does not exist") ;
+      if (!user.getUsername().contains(username)) {
+        throw new Error("user Does not exist");
       }
-      
+
       // check if password is coreect - Passwors.java
-      if(user.getUsername().contains(username) && user.getPassword().contains(password)) {
+      if (user.getUsername().contains(username) && user.getPassword().contains(password)) {
         user.setAuthenticated(true);
         // set the current logged in user
         setCurrentUser(user);
         view.signInSuccessMsg();
       } else {
-        throw new Error("username or password is incorrect. Try again.") ;
+        throw new Error("username or password is incorrect. Try again.");
       }
     }
   }
