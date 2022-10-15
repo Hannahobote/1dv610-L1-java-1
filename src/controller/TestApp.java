@@ -1,7 +1,7 @@
-package controller;
+package src.controller;
 
-import model.UserDatabase;
-import view.ConsoleUi;
+import src.model.UserDatabase;
+import src.view.ConsoleUi;
 
 // maual testing
 public class TestApp {

@@ -1,13 +1,13 @@
-package controller;
+package src.controller;
 
 import java.util.ArrayList;
 
-import model.Password;
-import model.User;
-import model.UserDatabase;
-import model.Username;
-import model.UsernameDatabase;
-import view.ConsoleUi;
+import src.model.Password;
+import src.model.User;
+import src.model.UserDatabase;
+import src.model.Username;
+import src.model.UsernameDatabase;
+import src.view.ConsoleUi;
 
 public class SimpleAuth {
 

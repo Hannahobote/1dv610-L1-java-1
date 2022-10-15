@@ -1,8 +1,8 @@
-package view;
+package src.view;
 
 import java.util.ArrayList;
 
-import model.User;
+import src.model.User;
 
 public class ConsoleUi {
   
