@@ -5,11 +5,13 @@ import model.Password;
 import model.User;
 import model.UserDatabase;
 import model.Username;
+import model.UsernameDatabase;
 import view.ConsoleUi;
 
 public class SimpleAuth {
 
   private UserDatabase userDatabase;
+  private UsernameDatabase nameList = new UsernameDatabase();
   private ConsoleUi view;
 
   // user is the model, and console ui is the view
@@ -24,18 +26,22 @@ public class SimpleAuth {
     // create user object
     Username username = new Username(newUsername);
     Password password = new Password(newPassword);
+    
+    // add username to username db and run erro checking
+    nameList.addUsername(newUsername);
     User user = new User(username, password);
     // add to database
     userDatabase.addUsers(user);
     view.registerSuccessMsg(user);
   }
 
+
   public void signIn(String username, String password) {
     // loop user database
     for (User user : userDatabase.getAllUsers()) {
       
       // check if username is correct - Username.java
-      if(user.getUsername().contains(username)) {
+      if(!user.getUsername().contains(username)) {
         throw new Error("user Does not exist") ;
       }
       
@@ -44,6 +50,7 @@ public class SimpleAuth {
         user.setAuthenticated(true);
         // set the current logged in user
         setCurrentUser(user);
+        view.signInSuccessMsg();
       } else {
         throw new Error("username or password is incorrect. Try again.") ;
       }
@@ -53,6 +60,7 @@ public class SimpleAuth {
   public void signOut() {
     // setting autheticated to false wil "sign out" the user.
     getCurrentUser().setAuthenticated(false);
+    setCurrentUser(null);
   }
 
   private void setCurrentUser(User currentUser) {
