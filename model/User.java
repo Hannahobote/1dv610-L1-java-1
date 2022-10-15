@@ -17,16 +17,16 @@ public class User {
     this.username = username;
   }
 
-  public Username getUsername() {
-    return username;
+  public String getUsername() {
+    return username.getName();
   }
 
   public void setPassword(Password password) {
     this.password = password;
   }
 
-  public Password getPassword() {
-    return password;
+  public String getPassword() {
+    return password.getPassword();
   }
 
   public Boolean getAuthenticated() {

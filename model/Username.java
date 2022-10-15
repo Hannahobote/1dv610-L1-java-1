@@ -7,7 +7,7 @@ public class Username {
   private String name;
   private ArrayList<String> nameList = new ArrayList<>();
 
-  Username(String name) {
+  public Username(String name) {
    this.name = name;
    addName(name);
   }

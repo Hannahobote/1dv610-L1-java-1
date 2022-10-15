@@ -7,7 +7,7 @@ public class Password {
   private String password;
   private ArrayList<String> passwordList = new ArrayList<>();
 
-  Password(String password) {
+  public Password(String password) {
    this.password = password;
    addPassword(password);
   }
