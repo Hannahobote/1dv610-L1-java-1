@@ -1,5 +1,6 @@
 package controller;
 import java.util.ArrayList;
+import java.util.Objects;
 
 import model.Password;
 import model.User;
@@ -58,7 +59,8 @@ public class SimpleAuth {
   }
 
   public void signOut() {
-    // setting autheticated to false wil "sign out" the user.
+    // setting autheticated to false will "sign out" the user.
+    view.signOutSuccessMsg(getCurrentUser().getUsername());
     getCurrentUser().setAuthenticated(false);
     setCurrentUser(null);
   }

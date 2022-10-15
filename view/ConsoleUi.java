@@ -8,7 +8,7 @@ public class ConsoleUi {
   
 
   public void registerSuccessMsg(User user) {
-    System.out.println( user.getUsername() + "has been registered succesfully");
+    System.out.println( user.getUsername() + " has been registered succesfully");
   }
 
   public void signInSuccessMsg() {
@@ -16,9 +16,16 @@ public class ConsoleUi {
   }
 
   public void printUserDatabase(ArrayList<User> userList) {
-    for (User user : userList) {
-      printOneUser(user);
-      System.out.println("\n");
+    
+    if(userList.size() == 0) {
+      System.out.println("user database is empty");
+    } else {
+  
+      for (User user : userList) {
+        printOneUser(user);
+        System.out.println("\n");
+      }
+
     }
   }
 
@@ -28,4 +35,14 @@ public class ConsoleUi {
     System.out.println("authenticated: " + user.getAuthenticated());
     System.out.println("\n");
   } 
+
+  public void print(String msg) {
+    System.out.println("\n");
+    System.out.println(msg);
+  }
+
+  public void signOutSuccessMsg(String name) {
+    System.out.println(name + " has successfully signed out");
+  }
+
 }
