@@ -14,14 +14,18 @@ public class SimpleAuth {
   private UserDatabase userDatabase;
   private UsernameDatabase nameList = new UsernameDatabase();
   private ConsoleUi view;
+  private User currentUser;
 
-  // user is the model, and console ui is the view
+  /**
+   * Constructor.
+   *
+   * @param userDatabase this is the model.
+   * @param view this is the user interface.
+   */
   SimpleAuth(UserDatabase userDatabase, ConsoleUi view) {
     this.userDatabase = userDatabase;
     this.view = view;
   }
-
-  private User currentUser;
 
   public void registerUser(String newUsername, String newPassword) {
     // create user object

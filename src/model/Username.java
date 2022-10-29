@@ -17,7 +17,6 @@ public class Username {
     this.name = name;
   }
  
-  // TODO: add errors here
   public void checkIfStringIsEmpty(String name) {
     if(name.isEmpty() || name.length() < 2) {
       throw new Error("Name must atleast consist of 2 characters");

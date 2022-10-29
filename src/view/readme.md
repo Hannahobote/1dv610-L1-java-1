@@ -1,1 +1,0 @@
-The view is to support the test casses in testApp.java

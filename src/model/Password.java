@@ -1,15 +1,13 @@
 package src.model;
 
-import java.util.ArrayList;
-
 public class Password {
   
   private String password;
-  private ArrayList<String> passwordList = new ArrayList<>();
 
   public Password(String password) {
    this.password = password;
-   addPassword(password);
+   checkpasswordLength();
+
   }
 
   public String getPassword() {
@@ -18,11 +16,6 @@ public class Password {
 
   public void setPassword(String password) {
     this.password = password;
-  }
-
-  private void addPassword(String password) {
-    checkpasswordLength();
-    passwordList.add(password);
   }
 
   public void checkpasswordLength() {
