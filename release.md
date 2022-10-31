@@ -25,12 +25,18 @@ Förtydligande: Examinator kommer sätta betyg oberoende på vad ni anser.
 ​
 ## Återanvändning
 Beskriv hur du anpassat din kod och instruktioner för att någon annan programmerare skall kunna använda din modul. Om du skrivit instruktioner för din användare, länka till dessa. Om inte, beskriv här hur någon skall göra för att använda din modul.
+
+[manual](release.md)
 ​
 ## Beskrivning av min kod
 Beskriv din kod på en hög abstraktionsnivå. En kort beskrivning av dina viktigaste klasser och metoder. Skapa gärna ett klassdiagram som bild. Använd det ni lärt er så här långt i 1dv607. Kommunicera så att jag kan förstå.
+
+[manual](release.md)
 ​
 ## Hur jag testat
 Beskriv hur du kommit fram till om din kod fungerar.
+
+Test Applikationen finns i src/controller/testApp.java. Testen är i gjort i form av en console applikation. Informationen är skriven manuellt och dem förväntade resultaten skrivs ut i terminalen- Alla tester är bort kommenterade och för att använda dem måste du ta bort snedstrecken. Observera att visa av testerna används med i kombination av andra testerna, som kan vara bort kommenterad. Instruktionerna finns i tabellen nedan.
 ​
 ### Testfall
 Lista de enskilda testfallen. **Fetmarkera** sådant som du själv fyllt i. En rad per testfall. Om ni använder vertyg för testning kan ni ha en bild här med testrapporten. Tänk på att kommunicera till mig. Vad fungerar?, vad fungerar inte? Hur är det testat? Vilka delar testas inte?

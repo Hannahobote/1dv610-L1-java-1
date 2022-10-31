@@ -1,5 +1,7 @@
 package src.controller;
 
+import java.util.ArrayList;
+
 import src.model.Password;
 import src.model.User;
 import src.model.UserDatabase;
@@ -9,21 +11,10 @@ import src.view.ConsoleUi;
 
 public class SimpleAuth {
 
-  private UserDatabase userDatabase;
+  private UserDatabase userDatabase = new UserDatabase();
   private UsernameDatabase nameList = new UsernameDatabase();
-  private ConsoleUi view;
+  private ConsoleUi view = new ConsoleUi();
   private User currentUser;
-
-  /**
-   * Constructor.
-   *
-   * @param userDatabase this is the model.
-   * @param view this is the user interface.
-   */
-  SimpleAuth(UserDatabase userDatabase, ConsoleUi view) {
-    this.userDatabase = userDatabase;
-    this.view = view;
-  }
 
   public void registerUser(String newUsername, String newPassword) {
     Username username = new Username(newUsername);
@@ -65,5 +56,10 @@ public class SimpleAuth {
 
   public User getCurrentUser() {
     return currentUser;
+  }
+
+  public ArrayList<User> getAllUsers() {
+    // TODO: return copy
+    return userDatabase.getAllUsers();
   }
 }

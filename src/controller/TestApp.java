@@ -9,9 +9,9 @@ public class TestApp {
   
   public static void main(String[] args) {
     
-    UserDatabase model = new UserDatabase();
+   //  UserDatabase model = new UserDatabase();
     ConsoleUi view = new ConsoleUi();
-    SimpleAuth simpleAuth = new SimpleAuth(model, view);
+    SimpleAuth simpleAuth = new SimpleAuth();
 
     // 1. register a user (works)
     // simpleAuth.registerUser("hannah", "password");
