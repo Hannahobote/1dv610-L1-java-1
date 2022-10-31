@@ -1,4 +1,4 @@
-Test Applikationen finns i controller/testApp.java. Testen är i gjort i form av en console applikation. Informationen är skriven manuellt och dem förväntade resultaten skrivs ut i terminalen- Alla tester är bort kommenterade och för att använda dem måste du ta bort snedstrecken. Observera att visa av testerna används med i kombination av andra testerna, som kan vara bort kommenterad. Instruktionerna finns i tabellen nedan.
+Test Applikationen finns i src/controller/testApp.java. Testen är i gjort i form av en console applikation. Informationen är skriven manuellt och dem förväntade resultaten skrivs ut i terminalen- Alla tester är bort kommenterade och för att använda dem måste du ta bort snedstrecken. Observera att visa av testerna används med i kombination av andra testerna, som kan vara bort kommenterad. Instruktionerna finns i tabellen nedan.
 
 | Vad som testats / Ex metod namn, eller krav | Hur det testats | Testresultat |
 | --- | --- | --- |

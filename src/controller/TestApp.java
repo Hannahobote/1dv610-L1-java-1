@@ -12,7 +12,7 @@ public class TestApp {
     UserDatabase model = new UserDatabase();
     ConsoleUi view = new ConsoleUi();
     SimpleAuth simpleAuth = new SimpleAuth(model, view);
-    
+
     // 1. register a user (works)
     // simpleAuth.registerUser("hannah", "password");
 
