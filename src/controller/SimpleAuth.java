@@ -26,31 +26,25 @@ public class SimpleAuth {
   }
 
   public void registerUser(String newUsername, String newPassword) {
-    // create user object
     Username username = new Username(newUsername);
     Password password = new Password(newPassword);
 
-    // add username to username db and run erro checking
     nameList.addUsername(newUsername);
     User user = new User(username, password);
-    // add to database
+  
     userDatabase.addUsers(user);
     view.registerSuccessMsg(user);
   }
 
   public void signIn(String username, String password) {
-    // loop user database
-    for (User user : userDatabase.getAllUsers()) {
 
-      // check if username is correct - Username.java
+    for (User user : userDatabase.getAllUsers()) {
       if (!user.getUsername().contains(username)) {
         throw new Error("user Does not exist");
       }
 
-      // check if password is coreect - Passwors.java
       if (user.getUsername().contains(username) && user.getPassword().contains(password)) {
         user.setAuthenticated(true);
-        // set the current logged in user
         setCurrentUser(user);
         view.signInSuccessMsg();
       } else {
@@ -60,7 +54,6 @@ public class SimpleAuth {
   }
 
   public void signOut() {
-    // setting autheticated to false will "sign out" the user.
     view.signOutSuccessMsg(getCurrentUser().getUsername());
     currentUser.setAuthenticated(false);
     setCurrentUser(null);
