@@ -10,8 +10,9 @@ public class UserDatabase {
   }
 
  public ArrayList<User> getAllUsers() {
-  // TODO: retun copy of userlist.
-   return userList;
+  ArrayList<User> copy = new ArrayList<>();
+  copy.addAll(userList);
+  return copy;
   }
 
   public User getOneUser(int index) {

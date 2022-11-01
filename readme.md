@@ -35,7 +35,7 @@ simpleAuth.signOut();
 ```
 
 ### Få en lista på alla registerade användare
-Observera att ni måsta använda en annan public metod från concole ui klassen, för skriva ut rätt information. Alternativt, kan ni skriva en for loop, som går igenom typen arrayList<User>
+Observera att ni måsta använda en annan public metod från concole ui klassen, för skriva ut rätt information. Alternativt, kan ni skriva en for loop, som går igenom typen arrayList<[User](src/model/User.java)>
 ```java
 // hur metoden ser ut 
 simpleAuth.getAllUsers()

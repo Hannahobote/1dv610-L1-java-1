@@ -34,9 +34,8 @@ public class SimpleAuth {
     }
   }
 
-  // TODO: does not work
+  // TODO: does not work when several users are registered.
   private void checkIfUserExist(User user, String username) {
-      System.out.println("check error :"  + user.getUsername());
       if (!user.getUsername().contains(username)) {
         throw new Error("user Does not exist");
       }

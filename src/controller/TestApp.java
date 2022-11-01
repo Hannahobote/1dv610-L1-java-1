@@ -43,7 +43,7 @@ public class TestApp {
     // view.printOneUser(simpleAuth.getCurrentUser());
 
     // 10. signout user
-    simpleAuth.signOut();
+     simpleAuth.signOut();
 
     //11. get all users (works)
     view.printUserDatabase(simpleAuth.getAllUsers());
