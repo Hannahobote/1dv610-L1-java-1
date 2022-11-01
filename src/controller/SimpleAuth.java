@@ -28,24 +28,32 @@ public class SimpleAuth {
   }
 
   public void signIn(String username, String password) {
-
     for (User user : userDatabase.getAllUsers()) {
+      checkIfUserExist(user, username);
+      checkCorrectCredentials(user, username, password);
+    }
+  }
+
+  // TODO: does not work
+  private void checkIfUserExist(User user, String username) {
+      System.out.println("check error :"  + user.getUsername());
       if (!user.getUsername().contains(username)) {
         throw new Error("user Does not exist");
       }
+  }
 
-      if (user.getUsername().contains(username) && user.getPassword().contains(password)) {
-        user.setAuthenticated(true);
-        setCurrentUser(user);
-        view.signInSuccessMsg();
-      } else {
-        throw new Error("username or password is incorrect. Try again.");
-      }
+  private void checkCorrectCredentials(User user, String username, String password) {
+    if (user.getUsername().contains(username) && user.getPassword().contains(password)) {
+      user.setAuthenticated(true);
+      setCurrentUser(user);
+      view.signInSuccessMsg(username);
+    } else {
+      throw new Error("username or password is incorrect. Try again.");
     }
   }
 
   public void signOut() {
-    view.signOutSuccessMsg(getCurrentUser().getUsername());
+    view.signOutSuccessMsg(currentUser.getUsername());
     currentUser.setAuthenticated(false);
     setCurrentUser(null);
   }
@@ -59,7 +67,6 @@ public class SimpleAuth {
   }
 
   public ArrayList<User> getAllUsers() {
-    // TODO: return copy
     return userDatabase.getAllUsers();
   }
 }

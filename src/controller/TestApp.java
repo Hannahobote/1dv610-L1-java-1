@@ -9,14 +9,14 @@ public class TestApp {
   
   public static void main(String[] args) {
     
-   //  UserDatabase model = new UserDatabase();
+    UserDatabase model = new UserDatabase();
     ConsoleUi view = new ConsoleUi();
     SimpleAuth simpleAuth = new SimpleAuth();
 
     // 1. register a user (works)
-    // simpleAuth.registerUser("hannah", "password");
+    simpleAuth.registerUser("hannah", "password");
 
-    // 2. register a second member (works)
+    // 2. register a second member (does not work)
     // simpleAuth.registerUser("john doe", "password");
     
     // 3. register someone with the same name
@@ -29,8 +29,8 @@ public class TestApp {
     // simpleAuth.registerUser("hannah2", "123456789123456789123456466");
 
     // 6. sign in a registered user (works)
-    // simpleAuth.signIn("hannah", "password");
-
+    simpleAuth.signIn("hannah", "password");
+  
     // 7. sign in a user that doesnt exist (works)
     // simpleAuth.signIn("hannah4", "password");
 
@@ -43,10 +43,10 @@ public class TestApp {
     // view.printOneUser(simpleAuth.getCurrentUser());
 
     // 10. signout user
-    //simpleAuth.signOut();
+    simpleAuth.signOut();
 
     //11. get all users (works)
-    // view.printUserDatabase(simpleAuth.getAllUsers());
+    view.printUserDatabase(simpleAuth.getAllUsers());
 
   }
 

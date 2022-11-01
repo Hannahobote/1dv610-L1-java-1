@@ -11,8 +11,8 @@ public class ConsoleUi {
     System.out.println( user.getUsername() + " has been registered succesfully");
   }
 
-  public void signInSuccessMsg() {
-    System.out.println("the user is signed in");
+  public void signInSuccessMsg(String username) {
+    System.out.println(username + " has succssesfully signed in");
   }
 
   public void printUserDatabase(ArrayList<User> userList) {
@@ -20,10 +20,9 @@ public class ConsoleUi {
     if(userList.size() == 0) {
       System.out.println("user database is empty");
     } else {
-  
+      System.out.println("===Users===");
       for (User user : userList) {
         printOneUser(user);
-        System.out.println("\n");
       }
 
     }

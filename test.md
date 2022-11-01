@@ -1,5 +1,7 @@
 Test Applikationen finns i src/controller/testApp.java. Testen är i gjort i form av en console applikation. Informationen är skriven manuellt och dem förväntade resultaten skrivs ut i terminalen- Alla tester är bort kommenterade och för att använda dem måste du ta bort snedstrecken. Observera att visa av testerna används med i kombination av andra testerna, som kan vara bort kommenterad. Instruktionerna finns i tabellen nedan.
 
+OBS: Det går att registrera 2 användare, men det går inte att logga in på en användare när det finns 2 registrerad. Har inte kunnat lössa detta problemet ännu.
+
 | Vad som testats / Ex metod namn, eller krav | Hur det testats | Testresultat |
 | --- | --- | --- |
 | test 1: simpleAuth.registerUser("hannah", "password");  | Registrerar den första användaren genom att ange användare namn och lösenord som argument. | “hannah has been registered successfully”
